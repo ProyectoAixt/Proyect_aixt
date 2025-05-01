@@ -20,7 +20,7 @@
 
 # Project information
 site_name: Proyecto Aixt
-site_url: https://squidfunk.github.io/mkdocs-material/
+site_url: https://ProyectoAixt.github.io/mkdocs-material/
 site_author: Fernando
 site_description: 
   Aixt is an innovative framework designed for microcontroller environments, based on a carefully selected subset of the V programming language, known for its fast compilation speed, simplicity, and memory safety. By deriving from V, Aixt adopts a modern and expressive syntax, moving away from the complexity of traditional languages like C or Assembly.
@@ -31,40 +31,22 @@ repo_name: Aixt
 repo_url: https://github.com/fermarsan/aixt/tree/main
 
 # Copyright
-#copyright: Copyright &copy; 2016 - 2025 Martin Donath
+# copyright: Copyright &copy; 2016 - 2025 Martin Donath
 
 # Configuration
 theme:
   name: material
   custom_dir: material/overrides
   features:
-    - announce.dismiss
-    - content.action.edit
-    - content.action.view
-    - content.code.annotate
-    - content.code.copy
-    # - content.code.select
-    # - content.footnote.tooltips
-    # - content.tabs.link
-    - content.tooltips
-    # - header.autohide
-    # - navigation.expand
     - navigation.footer
     - navigation.indexes
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
-    # - navigation.prune
     - navigation.sections
-    - navigation.tabs
-    # - navigation.tabs.sticky
+    - navigation.tabs # botones Home/Docs
     - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
-    - toc.follow
-    # - toc.integrate
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -105,12 +87,6 @@ plugins:
 
 # Additional configuration
 extra:
-  status:
-    new: Recently added
-    deprecated: Deprecated
-  analytics:
-    provider: google
-    property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/fermarsan/aixt/tree/main
@@ -124,52 +100,7 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
-  - toc:
-      permalink: true
-  - pymdownx.arithmatex:
-      generic: true
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.details
-  - pymdownx.emoji:
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.keys
-  - pymdownx.magiclink:
-      normalize_issue_symbols: true
-      repo_url_shorthand: true
-      user: squidfunk
-      repo: mkdocs-material
-  - pymdownx.mark
-  - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      auto_append:
-        - includes/mkdocs.md
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  - pymdownx.tabbed:
-      alternate_style: true
-      combine_header_slug: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
-  - pymdownx.tasklist:
-      custom_checkbox: true
-  - pymdownx.tilde
 
-not_in_nav: |
-  /tutorials/**/*.md
-
-# Page tree
 nav:
   - Home: index.md
   - Docs:
