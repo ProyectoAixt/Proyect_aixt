@@ -31,7 +31,7 @@ repo_name: Aixt
 repo_url: https://github.com/fermarsan/aixt/tree/main
 
 # Copyright
-copyright: Copyright &copy; 2016 - 2025 Martin Donath
+#copyright: Copyright &copy; 2016 - 2025 Martin Donath
 
 # Configuration
 theme:
