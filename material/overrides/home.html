@@ -1,0 +1,57 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% extends "main.html" %}
+{% block tabs %}
+  {{ super() }}
+  <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}
+        video-container {
+          background-color: rgb(255, 255, 255);
+          border-radius: 15px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          position: fixed;
+          transform: translate(-50%, -50%);
+          padding: 10 px; /* Añadimos un poco de espacio interno */
+        }
+        .video-container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 800px;
+        }
+  </style>
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <div class="mdx-hero__image">
+          <img src="assets/images/imagenTitulo.png" alt="" width="1659" height="1200" draggable="false">
+        </div>
+        <div class="mdx-hero__content">
+          
+            <p style="text-align: justify;">Aixt is an innovative framework designed for microcontroller environments, based on a carefully selected subset of the V programming language, known for its fast compilation speed, simplicity, and memory safety. By deriving from V, Aixt adopts a modern and expressive syntax, moving away from the complexity of traditional languages like C or Assembly.<br>
+               Its primary goal is to deliver a more intuitive and efficient development experience for resource-constrained devices, minimizing resource overhead during both compilation and runtime.Aixt positions itself as a bridge between the modernity of high-level languages and the practical demands of embedded development, enabling the creation of sophisticated applications without sacrificing low-level hardware control.
+            </p>
+        </div>
+      </div>
+        <div class="mdx-hero">
+          <div class="mdx-hero__image">
+            <img src="assets/images/pngCirculoNutria.png" alt="" width="1659" height="1200" draggable="false">
+          </div>
+          <div class="mdx-hero__content">
+              <p style="text-align: justify;">The name "Aixt" carries deep cultural and symbolic meaning, aligning with the project's core principles. <br>
+                 It originates from "Aixt" a word in the Ticuna language, spoken by Indigenous Amazonian people, honoring their rich cultural heritage and environmental values—principles reflected in Aixt efficient, low-power software design.Additionally, "Aixt" subtly nods to the V programming language, whose mascot is the agile and resourceful weasel. <br>
+                 The phonetic link reinforces Aixt aim to embody agility, efficiency, and cleverness. Thus, "Aixt" is more than a label: it merges ancestral wisdom with a modern technological identity rooted in simplicity and operational excellence.
+              </p>
+          </div>
+        </div>
+        <div class="video-container">
+          <h2>Video Tutorial</h2>
+          <iframe width="1659" height="1200" src="https://www.youtube.com/embed/dbCGMkhsr1E?si=sWiq_YKLr16lBFZ5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+  </section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}

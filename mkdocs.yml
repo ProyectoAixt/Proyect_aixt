@@ -1,0 +1,202 @@
+# Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+# Project information
+site_name: Proyecto Aixt
+site_url: https://squidfunk.github.io/mkdocs-material/
+site_author: Fernando
+site_description: 
+  Aixt is an innovative framework designed for microcontroller environments, based on a carefully selected subset of the V programming language, known for its fast compilation speed, simplicity, and memory safety. By deriving from V, Aixt adopts a modern and expressive syntax, moving away from the complexity of traditional languages like C or Assembly.
+  Its primary goal is to deliver a more intuitive and efficient development experience for resource-constrained devices, minimizing resource overhead during both compilation and runtime.Aixt positions itself as a bridge between the modernity of high-level languages and the practical demands of embedded development, enabling the creation of sophisticated applications without sacrificing low-level hardware control.
+
+# Repository
+repo_name: Aixt
+repo_url: https://github.com/fermarsan/aixt/tree/main
+
+# Copyright
+copyright: Copyright &copy; 2016 - 2025 Martin Donath
+
+# Configuration
+theme:
+  name: material
+  custom_dir: material/overrides
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    # - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/favicon.png
+  logo: assets/images/pngCirculoNutria.png
+
+# Plugins
+plugins:
+  - blog
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+
+# Hooks
+#hooks:
+#  - material/overrides/hooks/shortcodes.py
+#  - material/overrides/hooks/translations.py
+
+# Additional configuration
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/fermarsan/aixt/tree/main
+
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+not_in_nav: |
+  /tutorials/**/*.md
+
+# Page tree
+nav:
+  - Home: index.md
+  - Docs:
+    - Ai-Thinker: repoFer/Ai-Thinker/Ai-WB2-32S-Kit/quickref.md
+    - Arduino-Nano: repoFer/Arduino/Arduino-Nano/quickref.md
+    - MH-ATtiny88: repoFer/Atmel/MH-ATtiny88/quickref.md
+    - Cypress:
+      - CY8CKIT14540XX: repoFer/Cypress/PSoC4/CY8CKIT04942XX.md
+      - CY8CKIT14540XX: repoFer/Cypress/PSoC4/CY8CKIT14540XX.md
+    - Emulator: repoFer/Emulator/quickref.md
+    - OLED: repoFer/lib/oled/quickref.md
+    - AIR32F103: repoFer/Luatos/AIR32F103/quickref.md
+    - M0sense: repoFer/M0sense/M0sense.md
+    - Microchip:
+      - PIC 16:
+        - PIC16F8x: repoFer/Microchip/PIC16/PIC16F8x/quickref.md
+        - PIC16F676: repoFer/Microchip/PIC16/PIC16F676/quickref.md     
+        - PIC16F873A: repoFer/Microchip/PIC16/PIC16F873A/quickref.md
+        - PIC16F886: repoFer/Microchip/PIC16/PIC16F886/quiickref.md
+      - Pic 18:
+        - PIC18F452: repoFer/Microchip/PIC18/PIC18F452/quickref.md
+        - PIC16F886: repoFer/Microchip/PIC16/PIC16F886/quiickref.md
+    - NXT: repoFer/NXT/quickref.md
+    - Raspberry-Pi: repoFer/Raspberry-Pi/pico/quickref.md
+    - XIAO-SAMD21: repoFer/Seeed-Studio/XIAO-SAMD21/quickref.md
+    - Seeeduino_Xiao: repoFer/Seeeduino_Xiao/samd21/quickref.md
+    - STM32F103C: repoFer/ST/quickref.md
+    - W801: repoFer/W801/quickref.md
+    - CH573F-mini-BLE: repoFer/WCH/CH573F-mini-BLE/WCH/quickref.md
+    - ESP32-C3FH4: repoFer/WeAct Studio/ESP32-C3FH4/quickref.md
