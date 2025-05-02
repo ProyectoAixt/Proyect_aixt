@@ -29,6 +29,7 @@ jobs:
         with:
           cache: pip
           cache-dependency-path: |
+            pyproject.toml
             requirements.txt
       
       - name: Install dependencies
