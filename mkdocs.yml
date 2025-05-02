@@ -20,7 +20,7 @@
 
 # Project information
 site_name: Proyecto Aixt
-site_url: https://ProyectoAixt.github.io/mkdocs-material/
+site_url: https://proyectoaixt.github.io/mkdocs-material/
 site_author: Fernando
 site_description: 
   Aixt is an innovative framework designed for microcontroller environments, based on a carefully selected subset of the V programming language, known for its fast compilation speed, simplicity, and memory safety. By deriving from V, Aixt adopts a modern and expressive syntax, moving away from the complexity of traditional languages like C or Assembly.
