@@ -3,7 +3,7 @@ name: deploy
 on:
   push:
     branches:
-      - main  # Cambia esto si tu rama principal tiene otro nombre
+      - gh-deploy  # Cambia esto si tu rama principal tiene otro nombre
 
 jobs:
   build:
