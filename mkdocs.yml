@@ -174,10 +174,10 @@ extra:
       link: https://github.com/fermarsan/aixt/tree/main
   alternate:
     - name: English
-      link: /mkdocs-material/
+      link: /Proyect_aixt/
       lang: EN
     - name: Español
-      link: /mkdocs-material/es/index_es/
+      link: /Proyect_aixt/es/index_es/
       lang: ES
 
 # Extensions
