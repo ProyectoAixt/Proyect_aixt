@@ -1,5 +1,5 @@
 <div align="center">
-<img src="docs/assets/images/imagenTitulo.png" width="24%" height="24%">
+<img src="docs/assets/images/Aixt_logo.png" width="24%" height="24%">
 <h1>V-based Programming Framework for Microcontrollers</h1>
 </div>
 
