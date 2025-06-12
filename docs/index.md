@@ -1,9 +1,9 @@
 ---
 template: home.html
-title: Material for MkDocs
+title: Proyect Aixt
 social:
   cards_layout_options:
-    title: Documentation that simply works
+    title: Aixt
 ---
 
 Welcome to Material for MkDocs.

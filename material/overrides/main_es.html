@@ -1,0 +1,39 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% extends "base.html" %}
+{% block extrahead %}
+  <link rel="stylesheet" href="{{ 'assets/stylesheets/custom.7c86dd97.min.css' | url }}">
+{% endblock %}
+{% block announce %}
+  <style>
+  .linkedin svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle; /* Opcional: alinea con el texto */
+  }
+  .udistrital svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle; /* Opcional: alinea con el texto */
+  }
+  </style>
+  Para más actualizaciones <strong>@fermarsan</strong> en
+  <a rel="me" href="https://co.linkedin.com/in/fernando-mart%C3%ADnez-santa-3498513a">
+    <span class="linkedin">
+      {% include ".icons/fontawesome/brands/linkedin.svg" %}
+    </span>
+    <strong>linkedin</strong>
+  </a>
+  y 
+  <a href="https://ftecnologica.udistrital.edu.co/tecnologia-electricidad/index.php/docentes/martinez-santa-fernando">
+    <span class="udistrital">
+      {% include ".icons/fontawesome/brands/youtube.svg" %}
+    </span>
+    <strong>Universidad Distrital</strong>
+  </a>
+{% endblock %}
+{% block scripts %}
+  {{ super() }}
+  <script src="{{ 'assets/javascripts/custom.9e5da760.min.js' | url }}"></script>
+{% endblock %}

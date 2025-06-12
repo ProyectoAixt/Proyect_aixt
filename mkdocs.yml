@@ -1,23 +1,3 @@
-# Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to
-# deal in the Software without restriction, including without limitation the
-# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-# sell copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-# IN THE SOFTWARE.
-
 # Project information
 site_name: Proyecto Aixt
 site_url: https://proyectoaixt.github.io/mkdocs-material/
@@ -25,14 +5,11 @@ site_author: Fernando
 site_description: 
   Aixt is an innovative framework designed for microcontroller environments, based on a carefully selected subset of the V programming language, known for its fast compilation speed, simplicity, and memory safety. By deriving from V, Aixt adopts a modern and expressive syntax, moving away from the complexity of traditional languages like C or Assembly.
   Its primary goal is to deliver a more intuitive and efficient development experience for resource-constrained devices, minimizing resource overhead during both compilation and runtime.Aixt positions itself as a bridge between the modernity of high-level languages and the practical demands of embedded development, enabling the creation of sophisticated applications without sacrificing low-level hardware control.
-
 # Repository
 repo_name: Aixt
 repo_url: https://github.com/fermarsan/aixt/tree/main
-
 # Copyright
 # copyright: Copyright &copy; 2016 - 2025 Martin Donath
-
 # Configuration
 theme:
   name: material
@@ -44,53 +21,164 @@ theme:
     - navigation.tabs # botones Home/Docs
     - navigation.top
     - navigation.tracking
-    - search.highlight
+    - search.highlight 
     - search.share
     - search.suggest
   palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/link
-        name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
       accent: indigo
-      toggle:
-        icon: material/toggle-switch-off
-        name: Switch to system preference
   font:
     text: Roboto
     code: Roboto Mono
   favicon: assets/favicon.png
-  logo: assets/images/pngCirculoNutria.png
+  logo: assets/images/nutria_logo.png
+
+
+nav:
+  - Home: index.md
+  - Getting Started: 
+    - Configuration:
+      - How tu Use: EN/How_to_use.md
+      - Aixt V Languange: EN/Aixt_V_language.md
+      - Setup files: EN/Setup_files.md
+      - Devices and Boards: EN/Devices_and_Boards.md
+      - API: EN/API.md
+      - Folders: 
+        - General: EN/General_folder_tree.md
+        - Libraries: EN/Libraries_folder_tree.md
+        - API: EN/API_folder_tree.md
+      - Testing: EN/Testing.md
+  - Docs:
+    - Ai Thinker: EN/Ai-Thinker/Ai-WB2-32S-Kit/quickref.md
+    - Arduino: 
+      - Mega: EN/Arduino/Arduino-Mega/quickref.md
+      - Nano: EN/Arduino/Arduino-Nano/quickref.md
+      - Uno: EN/Arduino/Arduino-Uno/quickref.md
+    - Atmel:
+      - MH ATtiny88: EN/Atmel/MH-ATtiny88/quickref.md
+    - Cypress:
+      - CY8CKIT04942XX: EN/Cypress/PSoC4/CY8CKIT04942XX.md
+      - CY8CKIT14540XX: EN/Cypress/PSoC4/CY8CKIT14540XX.md
+    - Emulator: EN/Emulator/quickref.md
+    - Lib:
+      - OLED: EN/lib/oled/quickref.md
+    - Luatos:
+      - AIR32F103: EN/Luatos/AIR32F103/quickref.md
+    - M0sense: EN/M0sense/M0sense.md
+    - Microchip:
+      - PIC 24:
+        - Explorer 16: EN/Microchip/Explorer-16/quickref.md
+      - PIC 16:
+        - PIC16F8x: EN/Microchip/PIC16/PIC16F8x/quickref.md
+        - PIC16F676: EN/Microchip/PIC16/PIC16F676/quickref.md     
+        - PIC16F873A: EN/Microchip/PIC16/PIC16F873A/quickref.md
+        - PIC16F886: EN/Microchip/PIC16/PIC16F886/quiickref.md
+      - Pic 18:
+        - PIC18F452: EN/Microchip/PIC18/PIC18F452/quickref.md
+        - PIC18F2550: EN/Microchip/PIC18/PIC18F2550/quickref.md
+    - NXT: EN/NXT/quickref.md
+    - Raspberry Pi:
+      - Pico: EN/Raspberry-Pi/pico/quickref.md
+    - Seed Studio: 
+      - XIAO SAMD21: EN/Seeed-Studio/XIAO-SAMD21/quickref.md
+    - BluePill: 
+      - STM32F103C: EN/ST/BluePill/quickref.md
+    - W801: EN/W801/quickref.md
+    - WCH:
+      - CH573F mini BLE: EN/WCH/CH573F-mini-BLE/WCH/quickref.md
+    - WeAct Studi:
+      - ESP32 C3FH4: EN/WeAct Studio/ESP32-C3FH4/quickref.md
+  - Contact: contact.md
+
 
 # Plugins
 plugins:
-  - blog
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
       minify_html: true
-
-# Hooks
-#hooks:
-#  - material/overrides/hooks/shortcodes.py
-#  - material/overrides/hooks/translations.py
+  - i18n:
+        docs_structure: folder
+        languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: es
+          name: Español
+          build: true
+          theme:
+            palette:
+              primary: red
+          nav:
+            - Inicio: index_es.md
+            - Configuracion:
+              - Uso: ES/How_to_use.md
+              - Lenguaje V: ES/Aixt_V_language.md
+              - Archivos: ES/Setup_files.md
+              - Tarjetas y dispositivos: ES/Devices_and_Boards.md
+              - API: ES/API.md
+              - Carpetas: 
+                - General: ES/General_folder_tree.md
+                - Librerias: ES/Libraries_folder_tree.md
+                - API: ES/API_folder_tree.md
+              - Prueba: ES/Testing.md
+            - Documentos:
+              - Ai Thinker: ES/Ai-Thinker/Ai-WB2-32S-Kit/quickref.md
+              - Arduino: 
+                - Arduino Mega: ES/Arduino/Arduino-Mega/quickref.md
+                - Arduino Nano: ES/Arduino/Arduino-Nano/quickref.md
+                - Arduino uno: ES/Arduino/Arduino-Uno/quickref.md
+              - Atmel:
+                - MH ATtiny88: ES/Atmel/MH-ATtiny88/quickref.md
+              - Cypress:
+                - CY8CKIT04942XX: ES/Cypress/PSoC4/CY8CKIT04942XX.md
+                - CY8CKIT14540XX: ES/Cypress/PSoC4/CY8CKIT14540XX.md
+              - Emulator: ES/Emulator/quickref.md
+              - Lib:
+                - OLED: ES/lib/oled/quickref.md
+              - Luatos:
+                - AIR32F103: ES/Luatos/AIR32F103/quickref.md
+              - M0sense: ES/M0sense/M0sense.md
+              - Microchip:
+                - PIC 24:
+                  - Explorer 16: ES/Microchip/Explorer-16/quickref.md
+                - PIC 16:
+                  - PIC16F8x: ES/Microchip/PIC16/PIC16F8x/quickref.md
+                  - PIC16F676: ES/Microchip/PIC16/PIC16F676/quickref.md     
+                  - PIC16F873A: ES/Microchip/PIC16/PIC16F873A/quickref.md
+                  - PIC16F886: ES/Microchip/PIC16/PIC16F886/quiickref.md
+                - Pic 18:
+                  - PIC18F452: ES/Microchip/PIC18/PIC18F452/quickref.md
+                  - PIC18F2550: ES/Microchip/PIC18/PIC18F2550/quickref.md
+              - NXT: ES/NXT/quickref.md
+              - Raspberry Pi:
+                - Pico: ES/Raspberry-Pi/pico/quickref.md
+              - Seed Studio: 
+                - XIAO SAMD21: ES/Seeed-Studio/XIAO-SAMD21/quickref.md
+              - BluePill: 
+                - STM32F103C: ES/ST/BluePill/quickref.md
+              - W801: ES/W801/quickref.md
+              - WCH:
+                - CH573F mini BLE: ES/WCH/CH573F-mini-BLE/WCH/quickref.md
+              - WeAct Studi:
+                - ESP32 C3FH4: ES/WeAct Studio/ESP32-C3FH4/quickref.md
+            - Contacto: contact.md
 
 # Additional configuration
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/fermarsan/aixt/tree/main
-
+  alternate:
+    - name: English
+      link: /mkdocs-material/
+      lang: EN
+    - name: Español
+      link: /mkdocs-material/es/index_es/
+      lang: ES
 
 # Extensions
 markdown_extensions:
@@ -100,34 +188,3 @@ markdown_extensions:
   - def_list
   - footnotes
   - md_in_html
-
-nav:
-  - Home: index.md
-  - Docs:
-    - Ai-Thinker: repoFer/Ai-Thinker/Ai-WB2-32S-Kit/quickref.md
-    - Arduino-Nano: repoFer/Arduino/Arduino-Nano/quickref.md
-    - MH-ATtiny88: repoFer/Atmel/MH-ATtiny88/quickref.md
-    - Cypress:
-      - CY8CKIT14540XX: repoFer/Cypress/PSoC4/CY8CKIT04942XX.md
-      - CY8CKIT14540XX: repoFer/Cypress/PSoC4/CY8CKIT14540XX.md
-    - Emulator: repoFer/Emulator/quickref.md
-    - OLED: repoFer/lib/oled/quickref.md
-    - AIR32F103: repoFer/Luatos/AIR32F103/quickref.md
-    - M0sense: repoFer/M0sense/M0sense.md
-    - Microchip:
-      - PIC 16:
-        - PIC16F8x: repoFer/Microchip/PIC16/PIC16F8x/quickref.md
-        - PIC16F676: repoFer/Microchip/PIC16/PIC16F676/quickref.md     
-        - PIC16F873A: repoFer/Microchip/PIC16/PIC16F873A/quickref.md
-        - PIC16F886: repoFer/Microchip/PIC16/PIC16F886/quiickref.md
-      - Pic 18:
-        - PIC18F452: repoFer/Microchip/PIC18/PIC18F452/quickref.md
-        - PIC16F886: repoFer/Microchip/PIC16/PIC16F886/quiickref.md
-    - NXT: repoFer/NXT/quickref.md
-    - Raspberry-Pi: repoFer/Raspberry-Pi/pico/quickref.md
-    - XIAO-SAMD21: repoFer/Seeed-Studio/XIAO-SAMD21/quickref.md
-    - Seeeduino_Xiao: repoFer/Seeeduino_Xiao/samd21/quickref.md
-    - STM32F103C: repoFer/ST/quickref.md
-    - W801: repoFer/W801/quickref.md
-    - CH573F-mini-BLE: repoFer/WCH/CH573F-mini-BLE/WCH/quickref.md
-    - ESP32-C3FH4: repoFer/WeAct Studio/ESP32-C3FH4/quickref.md

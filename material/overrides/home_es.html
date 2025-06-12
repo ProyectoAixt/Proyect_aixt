@@ -1,0 +1,56 @@
+{#-
+  This file was automatically generated - do not edit
+-#}
+{% extends "main_es.html" %}
+{% block tabs %}
+  {{ super() }}
+  <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}
+        video-container {
+          background-color: rgb(255, 255, 255);
+          border-radius: 15px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+          position: fixed;
+          transform: translate(-50%, -50%);
+          padding: 10 px; /* Añadimos un poco de espacio interno */
+        }
+        .video-container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .video-container iframe {
+            width: 100%;
+            height: 800px;
+        }
+  </style>  
+  <section class="mdx-container">
+    <div class="md-grid md-typeset">
+      <div class="mdx-hero">
+        <div class="mdx-hero__image">
+          <img src="./../../assets/images/Aixt_logo.png" width="1659" height="1200" draggable="false">
+        </div>
+        <div class="mdx-hero__content">
+            <p style="text-align: justify;">Aixt es un marco de desarrollo innovador diseñado para entornos de microcontroladores, basado en un subconjunto cuidadosamente seleccionado del lenguaje de programación V, conocido por su velocidad de compilación, simplicidad y seguridad en el manejo de memoria. Al derivar de V, Aixt adopta una sintaxis moderna y expresiva, alejándose de la complejidad de lenguajes tradicionales como C o Assembly. <br>
+               Su objetivo principal es ofrecer una experiencia de desarrollo más intuitiva y eficiente para dispositivos con recursos limitados, minimizando el consumo tanto en tiempo de compilación como en tiempo de ejecución. Aixt se posiciona como un puente entre la modernidad de los lenguajes de alto nivel y las exigencias prácticas del desarrollo embebido, permitiendo crear aplicaciones sofisticadas sin renunciar al control de bajo nivel sobre el hardware.
+            </p>
+        </div>
+      </div>
+        <div class="mdx-hero">
+          <div class="mdx-hero__image">
+            <img src="./../../assets/images/nutria_logo.png" alt="" width="1659" height="1200" draggable="false">
+          </div>
+          <div class="mdx-hero__content">
+              <p style="text-align: justify;"> El nombre "Aixt" tiene un significado cultural y simbólico profundo, en sintonía con los principios fundamentales del proyecto. <br>
+                Proviene de una palabra en lengua Ticuna, hablada por pueblos indígenas del Amazonas, en honor a su rica herencia cultural y su vínculo con la naturaleza —valores que también se reflejan en el diseño eficiente y de bajo consumo energético de Aixt. Además, "Aixt" hace una sutil referencia al lenguaje V, cuyo símbolo es una comadreja: un animal ágil y astuto. <br> 
+                La semejanza fonética refuerza la intención de que Aixt represente agilidad, eficiencia e inteligencia. Así, "Aixt" es más que un nombre: es una fusión de sabiduría ancestral con una identidad tecnológica moderna, centrada en la simplicidad y la excelencia operativa.
+              </p>
+          </div>
+        </div>
+        <div class="video-container">
+          <h2>Video Tutorial</h2>
+          <iframe width="1659" height="1200" src="https://www.youtube.com/embed/dbCGMkhsr1E?si=sWiq_YKLr16lBFZ5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+  </section>
+{% endblock %}
+{% block content %}{% endblock %}
+{% block footer %}{% endblock %}

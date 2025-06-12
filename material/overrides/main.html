@@ -6,19 +6,31 @@
   <link rel="stylesheet" href="{{ 'assets/stylesheets/custom.7c86dd97.min.css' | url }}">
 {% endblock %}
 {% block announce %}
-  For updates follow <strong>@squidfunk</strong> on
-  <a rel="me" href="https://fosstodon.org/@squidfunk">
-    <span class="twemoji mastodon">
-      {% include ".icons/fontawesome/brands/mastodon.svg" %}
+  <style>
+  .linkedin svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle; /* Opcional: alinea con el texto */
+  }
+  .udistrital svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle; /* Opcional: alinea con el texto */
+  }
+  </style>
+  For updates follow <strong>@fermarsan</strong> on
+  <a rel="me" href="https://co.linkedin.com/in/fernando-mart%C3%ADnez-santa-3498513a">
+    <span class="linkedin">
+      {% include ".icons/fontawesome/brands/linkedin.svg" %}
     </span>
-    <strong>Fosstodon</strong>
+    <strong>linkedin</strong>
   </a>
   and
-  <a href="https://x.com/squidfunk">
-    <span class="twemoji twitter">
-      {% include ".icons/fontawesome/brands/twitter.svg" %}
+  <a href="https://ftecnologica.udistrital.edu.co/tecnologia-electricidad/index.php/docentes/martinez-santa-fernando">
+    <span class="udistrital">
+      {% include ".icons/fontawesome/brands/youtube.svg" %}
     </span>
-    <strong>Twitter</strong>
+    <strong>District University</strong>
   </a>
 {% endblock %}
 {% block scripts %}
